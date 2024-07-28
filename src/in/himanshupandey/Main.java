@@ -6,13 +6,29 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        SingleFileActivity hotelManagement = new SingleFileActivity();
+        System.out.println("...");
+        hotelManagement.togetRooms();
+        System.out.println("...");
+        hotelManagement.printArray();
+        System.out.println("...");
+        hotelManagement.bookRoom(0,0, "him");
+        System.out.println("...");
+        System.out.println(hotelManagement.getActiveBookings());
+        System.out.println("...");
+        hotelManagement.printActiveBookings();
+        System.out.println("...");
+        hotelManagement.checkOut("him");
+        System.out.println("...");
+        hotelManagement.printActiveBookings();
+    }
 
 //        int s = new MiscExamples().allDigitsSum(12);
 //        System.out.println(s);
 //
-     new MiscExamples().capitaliseWords("my name is jyoti sharma");
-  // new MiscExamples().repeatedCharacter("avada kadavera...");
-       // new MiscExamples().checkIsogram("JJYoti");
+    //  new MiscExamples().capitaliseWords("my name is jyoti sharma");
+    // new MiscExamples().repeatedCharacter("avada kadavera...");
+    // new MiscExamples().checkIsogram("JJYoti");
 
 //        MiscExamples examples = new MiscExamples();
 //        for (String s : List.of("madaM", "banana", "arora", "malyalam", "rotator", "level")) {
@@ -30,18 +46,9 @@ public class Main {
 //        System.out.println(sb);
 
 
-
-
-
 //
-//       SingleFileActivity.togetRooms();
-//
-//        int n1 = new SingleFileActivity().totalCoinsCollected(true);
-//         System.out.println(n1);
-//
+
 //    }
-
-    }
 
 
 //        int[] arr2 = MapExample.twoSums(new int[]{2, 4, 5, 8, 9}, 7);

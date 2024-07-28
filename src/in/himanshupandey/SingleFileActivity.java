@@ -1,28 +1,113 @@
 package in.himanshupandey;
 
-//public class SingleFileActivity {
-//
-//    public static void togetRooms() {
-//        boolean[][] arr = new boolean[10][26];
-//        for (int i = 0; i < arr.length; i++) {
-//            for (int j = 0; j < arr[i].length; j++) {
-//                arr[i][j] = false;
-//            }
-//        }
-//        printArray(arr);
-//    }
-//
-//    private static void printArray(boolean[][] arr) {
-//        for (int i = 0; i < arr.length; i++) {
-//            char c = 'A';
-//            for (int j = 0; j < arr[i].length; j++) {
-//                System.out.print(i + "" + c + "/" + arr[i][j] + " ");
-//                c++;
-//            }
-//            System.out.println("");
-//        }
-//    }
-//
+public class SingleFileActivity {
+    String[][] rooms;
+    int totalCoins;
+
+    public void togetRooms() {
+        this.rooms = new String[10][26];
+        for (int i = 0; i < rooms.length; i++) {
+            for (int j = 0; j < rooms[i].length; j++) {
+                rooms[i][j] = "";
+            }
+        }
+    }
+
+    public void printArray() {
+        for (int i = 0; i < rooms.length; i++) {
+            char c = 'A';
+            for (int j = 0; j < rooms[i].length; j++) {
+                System.out.print(i + "" + c + "/" + rooms[i][j] + " ");
+                c++;
+            }
+            System.out.println("");
+        }
+    }
+
+    public void bookRoom(int i, int j, String customerName) {
+        if (rooms[i][j].equals("")) {
+            rooms[i][j] = customerName;
+        }
+        totalCoins += 1;
+
+    }
+
+    public int getActiveBookings() {
+        int count = 0;
+        for (int i = 0; i < rooms.length; i++) {
+            for (int j = 0; j < rooms[i].length; j++) {
+                if (!rooms[i][j].equals("")) {
+                    count = +1;
+                }
+            }
+
+        }
+        return count;
+    }
+
+    public void printActiveBookings() {
+        for (int i = 0; i < rooms.length; i++) {
+            for (int j = 0; j < rooms[i].length; j++) {
+                if (!rooms[i][j].equals("")) {
+                    System.out.println(rooms[i][j] + " " + i + " " + j);
+                }
+            }
+        }
+
+    }
+
+    public void checkOut(String customerName) {
+        for (int i = 0; i < rooms.length; i++) {
+            for (int j = 0; j < rooms[i].length; j++) {
+                if (rooms[i][j] == customerName) {
+                    rooms[i][j] = "";
+                    return;
+                }
+            }
+
+        }
+
+    }
+
+    // return should be 0A, 3B
+    public String roomNumber(String customerName) {
+        String roomNumber= " ";
+        for (int i = 0; i < rooms.length; i++) {
+            char c = 'A';
+            for (int j = 0; j < rooms[i].length; j++) {
+                if(rooms[i][j].equals(customerName)){
+                    roomNumber = i + ""+ c;
+                    System.out.print(roomNumber );
+                }
+                c++;
+            }
+        }
+        return roomNumber;
+    }
+
+    // roomNumer  : 0A , 1B
+    public String cusName(String roomNum) {
+        String cusName = " ";
+        for (int i = 0; i < rooms.length; i++) {
+            char c = 'A';
+            for (int j = 0; j < rooms[i].length; j++) {
+                if(i+""+ c == roomNum){
+                    cusName = rooms[i][j];
+                    return cusName;
+                }
+                c++;
+            }
+        }
+        return cusName;
+    }
+
+    public String getCustomerName(String roomNum){
+        int row = roomNum.charAt(0) - '0';
+        int col = roomNum.charAt(1) - 'A';
+        return this.rooms[row][col];
+    }
+}
+
 //
 //
 //
