@@ -6,22 +6,29 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        SingleFileActivity hotelManagement = new SingleFileActivity();
-        System.out.println("...");
-        hotelManagement.togetRooms();
-        System.out.println("...");
-        hotelManagement.printArray();
-        System.out.println("...");
-        hotelManagement.bookRoom(0,0, "him");
-        System.out.println("...");
-        System.out.println(hotelManagement.getActiveBookings());
-        System.out.println("...");
-        hotelManagement.printActiveBookings();
-        System.out.println("...");
-        hotelManagement.checkOut("him");
-        System.out.println("...");
-        hotelManagement.printActiveBookings();
+        int num = new MiscExamples().allDigitsSum(1768);
+        System.out.println(num);
+
+
+
+//        SingleFileActivity hotelManagement = new SingleFileActivity();
+//        System.out.println("...");
+//        hotelManagement.togetRooms();
+//        System.out.println("...");
+//        hotelManagement.printArray();
+//        System.out.println("...");
+//        hotelManagement.bookRoom(0,0, "him");
+//        System.out.println("...");
+//        System.out.println(hotelManagement.getActiveBookings());
+//        System.out.println("...");
+//        hotelManagement.printActiveBookings();
+//        System.out.println("...");
+//        hotelManagement.checkOut("him");
+//        System.out.println("...");
+//        hotelManagement.printActiveBookings();
     }
+
+
 
 //        int s = new MiscExamples().allDigitsSum(12);
 //        System.out.println(s);
