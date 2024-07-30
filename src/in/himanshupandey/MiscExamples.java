@@ -31,9 +31,9 @@ public class MiscExamples {
 
     public int allDigitsSum(int n) {
         int sum = 0;
-        while(n>0){
-            sum = sum + n%10;
-            n = n/10;
+        while (n > 0) {
+            sum = sum + n % 10;
+            n = n / 10;
         }
         return sum;
 
@@ -80,4 +80,18 @@ public class MiscExamples {
         return true;
     }
 
+    public boolean primeNumber(int n) {
+        int num;
+        if(n<=1){
+            return false;
+        }
+        for(int i=2; i< n;i++){
+            num = n%i;
+            if(num==0){
+                return false;
+            }
+        }
+        return true;
+
+    }
 }

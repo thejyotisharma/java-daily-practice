@@ -6,8 +6,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        int num = new MiscExamples().allDigitsSum(1768);
-        System.out.println(num);
+        boolean b = new MiscExamples().primeNumber(7);
+        System.out.println(b);
+//        int num = new MiscExamples().allDigitsSum(1768);
+//        System.out.println(num);
 
 
 
