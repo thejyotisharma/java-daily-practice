@@ -1,13 +1,32 @@
 package in.himanshupandey;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.HashMap;
 import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
-        boolean b = new MiscExamples().primeNumber(7);
-        System.out.println(b);
+    public static void main(String[] args) throws InterruptedException {
+    FormyAutomation form = new FormyAutomation();
+       form.startBrowser();
+        form.setText("first-name", "Jyoti");
+        form.setText("last-name", "Sharma");
+        form.setText("job-title", "SDET");
+        form.checkOption("radio-button-2");
+        form.checkOption("checkbox-2");
+        form.setText("datepicker","17/08/2024");
+        form.setExperience("select-menu","3");
+        form.submit();
+
+
+
+        Thread.sleep(10000);
+
+
+    //        boolean b = new MiscExamples().primeNumber(7);
+//        System.out.println(b);
 //        int num = new MiscExamples().allDigitsSum(1768);
 //        System.out.println(num);
 
